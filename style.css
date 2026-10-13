@@ -1,0 +1,32 @@
+/* Macht den Hintergrund der Website dunkel und zentriert das Spiel */
+body {
+    margin: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Nimmt die ganze Bildschirmhöhe ein */
+    font-family: Arial, sans-serif;
+}
+
+/* Das ist unser Spielfeld */
+#game-container {
+    width: 400px;
+    height: 600px;
+    background-color: #222;
+    border: 4px solid #ff0055; /* Neon-Pinker Rand */
+    box-shadow: 0 0 20px #ff0055; /* Cooles Leuchten */
+    position: relative; /* Wichtig für die Bewegung der Figuren! */
+    overflow: hidden; /* Versteckt Objekte, die aus dem Spielfeld fallen */
+}
+
+/* Das ist unsere Spielfigur */
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: #00ffff; /* Neon-Cyan */
+    box-shadow: 0 0 15px #00ffff;
+    position: absolute; /* Löst die Figur aus dem normalen Textfluss */
+    bottom: 20px; /* Abstand nach unten */
+    left: 175px; /* Genau in der Mitte (400 Gesamtbreite - 50 Spielerbreite = 350 / 2) */
+}
