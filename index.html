@@ -9,9 +9,27 @@
 </head>
 <body>
 
-    <!-- Das ist der Kasten, in dem unser Spiel abläuft -->
     <div id="game-container">
+        <div id="score-board">Punkte: <span id="score">0</span></div>
+        <div id="highscore-board">Rekord: <span id="highscore">0</span></div>
         <div id="player"></div>
+        
+        <!-- --- NEU: Start-Bildschirm --- -->
+        <div id="start-screen">
+            <button id="start-button">Spiel starten</button>
+        </div>
+        <!-- --- NEU: Game Over Bildschirm --- -->
+        <!-- --- Game Over Bildschirm --- -->
+        <div id="game-over-screen">
+            <h2>GAME OVER</h2>
+            <p>Deine Punkte: <span id="final-score">0</span></p>
+            
+            <!-- NEU: Rekord-Anzeige und die Jubel-Meldung -->
+            <p>Rekord: <span id="final-highscore">0</span></p>
+            <h3 id="new-highscore-msg">🎉 NEUER HIGHSCORE! 🎉</h3>
+            
+            <button id="restart-button">Nochmal Spielen</button>
+        </div>
     </div>
 
     <!-- Hier verknüpfen wir die JavaScript Datei -->

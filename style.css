@@ -30,3 +30,120 @@ body {
     bottom: 20px; /* Abstand nach unten */
     left: 175px; /* Genau in der Mitte (400 Gesamtbreite - 50 Spielerbreite = 350 / 2) */
 }
+/* Vorlage für die fallenden Objekte */
+.falling-object {
+    width: 30px;
+    height: 30px;
+    background-color: #ffaa00; /* Neon-Orange */
+    box-shadow: 0 0 15px #ffaa00;
+    position: absolute;
+    top: 0px; /* Startet ganz oben */
+}
+#score-board {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10; /* Sorgt dafür, dass der Text vor fallenden Objekten bleibt */
+}
+/* --- NEU: Start-Bildschirm --- */
+#start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Halbtransparentes Schwarz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Sorgt dafür, dass es über allen anderen Elementen liegt */
+}
+
+#start-button {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #00ffff; /* Neon-Cyan wie der Spieler */
+    color: #121212;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+#start-button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 25px #fff;
+}
+/* --- NEU: Game Over Bildschirm --- */
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dunkler Hintergrund */
+    display: none; /* WICHTIG: Am Anfang ist der Bildschirm unsichtbar! */
+    flex-direction: column; /* Ordnet Text und Button untereinander an */
+    justify-content: center;
+    align-items: center;
+    z-index: 30; /* Liegt ganz oben über allem */
+}
+
+#game-over-screen h2 {
+    color: #ff0055; /* Neon-Pink */
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-shadow: 0 0 15px #ff0055;
+}
+
+#game-over-screen p {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+#restart-button {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #ff0055; 
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff0055;
+}
+
+#restart-button:hover {
+    background-color: #fff;
+    color: #ff0055;
+    box-shadow: 0 0 25px #fff;
+}
+/* NEU: Highscore Styling */
+#highscore-board {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ffaa00; /* Orange zur Unterscheidung */
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10;
+}
+/* --- NEU: Neuer Highscore Meldung --- */
+#new-highscore-msg {
+    display: none; /* Ist am Anfang immer versteckt */
+    color: #ffaa00; /* Neon-Orange */
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px #ffaa00;
+    animation: blink 1s infinite; /* Startet die Blink-Animation */
+}
+
+/* Erstellt den Blink-Effekt */
+@keyframes blink {
+    50% { opacity: 0; }
+}
